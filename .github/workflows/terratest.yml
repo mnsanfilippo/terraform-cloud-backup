@@ -3,9 +3,15 @@ on:
   pull_request:
     branches-ignore:
       - main
+    paths:
+      - '**.go'
+      - '**.tf'
   push:
     branches-ignore:
       - main
+    paths:
+      - '**.go'
+      - '**.tf'
 jobs:
   terratest:
     runs-on: ubuntu-latest
