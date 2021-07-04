@@ -7,7 +7,7 @@ on:
     branches-ignore:
       - main
 jobs:
-  go-test:
+  terratest:
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
