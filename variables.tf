@@ -11,7 +11,7 @@ variable "lambda_name" {
 }
 
 variable "bucket_name" {
-  type = string
+  type        = string
   description = "Bucket to save the backups"
 }
 
