@@ -1,5 +1,5 @@
 # Terraform Cloud Backup
-This module creates saves the last terraform state in S3 of the given workspaces every time that a terraform state changes
+This module creates the last terraform state in S3 of the given workspaces every time a Terraform state changes.
 ## Usage
 This module needs the lambda build in S3, first you should build this lambda and upload it to S3
 [go-tools-tfc-backup](https://github.com/mnsanfilippo/go-tools-tfc-backup)
