@@ -1,7 +1,7 @@
 // API GW
 
 module "api_gateway" {
-  depends_on             = [aws_lambda_function.tfc-workspaces-backup]
+      depends_on             = [aws_lambda_function.tfc-workspaces-backup]
   source                 = "terraform-aws-modules/apigateway-v2/aws"
   name                   = var.apigw_name
   description            = "tfe-backup"
