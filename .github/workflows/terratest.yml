@@ -56,7 +56,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           path: main
-
       - name: Render terraform docs inside the USAGE.md and push changes back to PR branch
         uses: terraform-docs/gh-actions@v0.6.1
         with:
@@ -64,6 +63,7 @@ jobs:
           output-file: USAGE.md
           output-method: inject
           git-push: "true"
+          working-dir: .,examples/complete
 
       - name: Test Golang Code
         run: |
