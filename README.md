@@ -1,5 +1,4 @@
-# tfc-backup
-Terraform Cloud Backup
+# Terraform Cloud Backup
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
