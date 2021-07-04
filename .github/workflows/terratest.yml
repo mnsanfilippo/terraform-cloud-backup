@@ -52,14 +52,6 @@ jobs:
           git push
         continue-on-error: true
         working-directory: main
-
-      - name: Test Golang Code
-        run: |
-          GOOS=linux GOARCH=amd64 CGO_ENABLED=0
-          go mod tidy
-          go test -v ./...
-        working-directory: main/tests
-
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
@@ -69,7 +61,14 @@ jobs:
         uses: terraform-docs/gh-actions@v0.6.1
         with:
           config-file: .terraform-docs.yml
-          working-dir: ./
           output-file: USAGE.md
           output-method: inject
           git-push: "true"
+
+      - name: Test Golang Code
+        run: |
+          GOOS=linux GOARCH=amd64 CGO_ENABLED=0
+          go mod tidy
+          go test -v ./...
+        working-directory: main/tests
+
