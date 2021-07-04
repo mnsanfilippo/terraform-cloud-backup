@@ -1,0 +1,29 @@
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+         ],
+         "Resource":"*"
+      },
+      {
+         "Sid":"PutObject",
+         "Action":[
+            "s3:PutObject",
+            "s3:PutObjectAcl"
+         ],
+         "Effect":"Allow",
+         "Resource":"${bucket_arn}/*"
+      },
+      {
+         "Effect":"Allow",
+         "Action":"kms:Decrypt",
+         "Resource":"${kms_arn}"
+
+      }
+   ]
+}
