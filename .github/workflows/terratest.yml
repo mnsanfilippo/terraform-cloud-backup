@@ -31,7 +31,8 @@ jobs:
           ls -lah
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add `go fmt ./...`
+          go fmt ./...
+          git add .
           git commit -m "github action: go fmt"
           git push
         continue-on-error: true
@@ -43,7 +44,8 @@ jobs:
           ls -lah
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add `terraform fmt -recursive`
+          terraform fmt -recursive
+          git add .
           git commit -m "github action: terraform fmt"
           git push
         continue-on-error: true
