@@ -12,6 +12,7 @@ variable "lambda_name" {
 
 variable "bucket_name" {
   type = string
+  description = "Bucket to save the backups"
 }
 
 variable "apigw_name" {
@@ -26,7 +27,7 @@ variable "notification_name" {
 
 variable "workspaces_ids" {
   type        = list(string)
-  description = "List of the workspaces IDs to apply the backup solution"
+  description = "List of the workspaces IDs to back up."
 }
 
 variable "tf_token" {
@@ -40,5 +41,5 @@ variable "bucket_builds" {
 }
 variable "lambda_s3_key" {
   type        = string
-  description = "Lambda build key"
+  description = "Lambda Build Key"
 }
