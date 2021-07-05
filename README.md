@@ -5,7 +5,7 @@ This module needs the lambda build in S3, first you should build this lambda and
 [go-tools-tfc-backup](https://github.com/mnsanfilippo/go-tools-tfc-backup)
 ```terraform
 module "example" {
-  source = "https://github.com/mnsanfilippo/terraform-cloud-backup.git?ref=master"
+  source = "https://github.com/mnsanfilippo/terraform-cloud-backup.git?ref=main"
   bucket_builds  = var.bucket_builds
   bucket_name    = var.bucket_name
   lambda_s3_key  = var.lambda_s3_key
